@@ -1,0 +1,17 @@
+﻿CREATE TABLE clients (
+id INT NOT NULL PRIMARY KEY IDENTITY,
+name VARCHAR (100) NOT NULL,
+email VARCHAR (150) NOT NULL UNIQUE,
+phone VARCHAR(20) NULL,
+address VARCHAR(100) NULL,
+created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+INSERT INTO clients (name, email, phone, address)
+VALUES
+('Bill Gates', 'bill.gates@microsoft.com', '+123456789', 'New York, usa' ),
+('Elon Musk', 'elon.musk@spacex.com', '+123456789', 'Florida, usa' ),
+('will Smith', 'will.Smith@gmail.com', '+123456789', 'California, usa' ),
+('Bob Marley', 'bob@gmail.com', '+123456789', 'Texas, usa' ),
+('Cristiano Ronaldo', 'cristiano.ronaldo@gmail.com', '+123456789', 'Manchester, Europa' ),
+('Boris Johnson', 'boris.johnson@gmail.com', '+123456789', 'London, England' )
